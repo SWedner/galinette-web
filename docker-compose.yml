@@ -6,8 +6,8 @@ services:
     container_name: galinette-backend
     restart: unless-stopped
     environment:
-      GALINETTE_AD_DOMAIN: example.local
-      GALINETTE_AD_NETBIOS: EXAMPLE
+      GALINETTE_AD_DOMAIN: weland.com
+      GALINETTE_AD_NETBIOS: WEL
       GALINETTE_AD_DC: ""              # vide = auto-discovery DNS
       GALINETTE_AD_ADMIN_GROUP: Galinette-Admins
       GALINETTE_SESSION_TTL_SECONDS: "28800"
@@ -17,7 +17,7 @@ services:
       # mysql+pymysql://user:password@hostname:3306/galinette
       GALINETTE_DATABASE_URL: ""
       GALINETTE_COOKIE_SECURE: "true"
-      GALINETTE_CORS_ORIGINS: '["https://galinette.example.local"]'
+      GALINETTE_CORS_ORIGINS: '["https://galinette.weland.com"]'
       GALINETTE_DATA_DIR: /data
     volumes:
       - galinette_data:/data
